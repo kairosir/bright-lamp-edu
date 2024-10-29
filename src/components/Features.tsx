@@ -27,12 +27,15 @@ const Features = () => {
   return (
     <div className="py-20 px-4 bg-cream">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">Наши преимущества</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 animate-fade-in">
+          Наши преимущества
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300"
+              className="flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300 animate-bounce-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-primary mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
